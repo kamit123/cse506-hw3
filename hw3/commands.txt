@@ -1,0 +1,48 @@
+*Concat*
+./xhw3 -j 4
+./xhw3 -j 4 -i
+./xhw3 -j 4 -i input1.txt 
+./xhw3 -j 4 -i input1.txt,input2.txt -o
+./xhw3 -j 4 -i input1.txt,input2.txt -o output.txt
+./xhw3 -j 4 -i input1.txt,input2d.txt -o output.txt //wrong input file
+
+
+*Checksum*
+./xhw3 -j 3 -i input1.txt -a md5 -z 1
+./xhw3 -j 3 -i input11.txt -a md5 -z 1
+./xhw3 -j 3 -i input11.txt -a md51 -z 1
+./xhw3 -j 3 -i input11.txt -a md51 -z
+./xhw3 -j 3 -i
+
+
+*Xcrypt*
+./xhw3 -j 1 -c aes -e -p password -i "input1.txt" -o "input1e.txt"
+./xhw3 -j 1 -c aes -d -p password -i "input1e.txt" -o "input1d.txt"
+./xhw3 -j 1 -c as -d -p password -i "input1e.txt" -o "input1d.txt"
+./xhw3 -j 1 -c aes -d -p pasword -i "input1e.txt" -o "input1d.txt"
+./xhw3 -j 1 -c aes -d -p password -i "input1e.txt"
+./xhw3 -j 1 -c blowfish -e -p password -i "input1.txt" -o "input1e.txt"
+./xhw3 -j 1 -c blowfish -d -p password -i "input1e.txt" -o "input1d.txt"
+
+
+*Xpress*
+./xhw3 -j 2 -a deflate -c -i "input1.txt" -o "input1c.txt"
+./xhw3 -j 2 -a deflate -d -i "input1c.txt" -o "input1d.txt"
+./xhw3 -j 2 -a deflate -c -i "input1c.txt"
+./xhw3 -j 2 -a deflate -d -i "input1c.txt"
+
+*demo1*
+./demo1
+
+
+*demo2*
+./demo2
+./xhw3 -j 5
+./xhw3 -j 6 -i  -j 
+./xhw3 -j 5
+./xhw3 -j 7 -i -j -z
+./xhw3 -j 5
+
+
+*demo3*
+./demo3
